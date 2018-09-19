@@ -11,9 +11,9 @@ from tensorflow.examples.tutorials.mnist import input_data
 class DatasetsLoader():
 
     def __init__(self):
-        self.fashion_mnist = '/home/xiximiao/Documents/Python/fashion mnist'
-        self.mnist = '/home/xiximiao/Documents/Python/mnist'
-        self.cifar10 = '/home/xiximiao/Documents/Python/cifar10'
+        self.fashion_mnist = './fashion mnist'
+        self.mnist = './mnist'
+        self.cifar10 = './cifar10'
 
     def fashion_mnist_loader(self):
         return input_data.read_data_sets(self.fashion_mnist)
