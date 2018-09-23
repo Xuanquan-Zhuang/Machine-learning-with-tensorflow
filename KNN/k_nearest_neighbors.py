@@ -5,11 +5,10 @@
 
 import numpy as np
 import tensorflow as tf
-from sklearn.neighbors import KNeighborsClassifier
 from Datasets.DatasetsLoader import DatasetsLoader
 
 
-class KNearestNeighbors():
+class KNearestNeighbors:
 
     def __init__(self, neighbors, distance='l2'):
         self.neighbors = neighbors
