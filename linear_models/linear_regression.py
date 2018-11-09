@@ -4,6 +4,7 @@
 # @Date  : 18-9-21
 
 import tensorflow as tf
+from sklearn import linear_model
 from sklearn.datasets import load_boston
 from sklearn.model_selection import train_test_split
 
@@ -82,6 +83,14 @@ if __name__ == '__main__':
     model.fit(x_train, y_train)
 
     y_test_pred = model.predict(x_test)
-    mse = ((y_test_pred - y_test) ** 2).mean()
+    mse = ((y_test_pred - y_test.reshape([-1, 1])) ** 2).mean()
 
     print('Mean square error: ', mse)
+
+    model_sklearn = linear_model.LinearRegression()
+    model_sklearn.fit(x_train, y_train)
+
+    y_test_pred_sklearn = model_sklearn.predict(x_test)
+    mse_sklearn = ((y_test_pred_sklearn - y_test) ** 2).mean()
+
+    print('Mean square error for sklearn:, ', mse_sklearn)
