@@ -5,7 +5,12 @@
 
 import numpy as np
 import tensorflow as tf
+<<<<<<< HEAD:KNN/k_nearest_neighbors.py
 from Datasets.DatasetsLoader import DatasetsLoader
+=======
+from sklearn.neighbors import KNeighborsClassifier
+from datasets.DatasetsLoader import DatasetsLoader
+>>>>>>> f258f97db77a74e4bf576a34b155ce402a9b6633:knn/KNearestNeighbors.py
 
 
 class KNearestNeighbors:
