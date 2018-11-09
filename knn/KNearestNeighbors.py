@@ -6,7 +6,7 @@
 import numpy as np
 import tensorflow as tf
 from sklearn.neighbors import KNeighborsClassifier
-from Datasets.DatasetsLoader import DatasetsLoader
+from datasets.DatasetsLoader import DatasetsLoader
 
 
 class KNearestNeighbors():
